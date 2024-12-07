@@ -29,4 +29,14 @@
 	</bean>
 
 
+	<!--For Addition.java-->
+
+	<bean class="com.springcore.ci.Addition" name="addition">
+		<!--Explicitly defining type to avoid Ambiguity -->
+		<!--index defines in what order the values must be passed to the constructor -->
+		<constructor-arg value="12" type="double" index="1" />
+		<constructor-arg value="11" type="double" index="0" />
+	</bean>
+
+
 </beans>
