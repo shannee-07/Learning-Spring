@@ -6,17 +6,22 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<context:annotation-config/>
+	<context:annotation-config />
 	<!--  this is first bean -->
-	<bean class="com.springcore.autowiring.annotation.Address" name="address">
+	<bean class="com.springcore.autowiring.annotation.Address" name="address1">
 		<property name="street" value="Scheme 54, Vijay Nagar" />
 		<property name="city" value="Indore" />
 	</bean>
 
+	<bean class="com.springcore.autowiring.annotation.Address" name="address2">
+		<property name="street" value="Chandni Chawk" />
+		<property name="city" value="Delhi" />
+	</bean>
+
 	<!--  this is second bean -->
 	<!--Using byName: this will try to match the name of the object defined in the Employee (address) with the name of the available beans-->
-	<bean class="com.springcore.autowiring.annotation.Employee1" name="emp1"/>
-	
+	<bean class="com.springcore.autowiring.annotation.Employee1" name="emp1" />
+
 	<!--Other available options:
 		byType: Check for bean with the data type of object, if there are multiple defined beans of the same class then error will be thrown
 		constructor
