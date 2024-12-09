@@ -22,6 +22,19 @@ public class Student {
 	@Value("#{T(java.lang.Math).PI}")
 	private double pi;
 	
+	@Value("#{4%2==0}")
+	private boolean isActive;
+	
+	public boolean isActive() {
+		return isActive;
+	}
+
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+
+	
+	
 
 	public double getPi() {
 		return pi;
@@ -73,7 +86,8 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [name=" + name + ", n=" + n + ", sqrt=" + sqrt + ", pi=" + pi + ", intro=" + intro + "]";
+		return "Student [name=" + name + ", n=" + n + ", sqrt=" + sqrt + ", pi=" + pi + ", isActive=" + isActive
+				+ ", intro=" + intro + "]";
 	}
 
 }
