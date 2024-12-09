@@ -15,8 +15,10 @@ public class Main {
 		
 		
 		Student student = (Student) context.getBean("stu1", Student.class);
-		
-		
 		System.out.println(student.getFriends());
+		System.out.println(student.hashCode());
+		
+		Student student1 = (Student) context.getBean("stu1", Student.class);
+		System.out.println(student1.hashCode());
 	}
 }
